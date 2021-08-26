@@ -7,35 +7,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
-    <label>Цвет фона:
-        <select class="filter background-setting" name="font-color">
-            <option value="inherit" selected>По умолчанию</option>
-            <option value="black">Чёрный</option>
-            <option value="white">Белый</option>
-            <option value="ghostwhite">Светло-серый</option>
-            <option value="pink">Розовый</option>
-            <option value="darkred">Тёмно-красный</option>
-            <option value="darkorange">Оранжевый</option>
-            <option value="saddlebrown">Коричневый</option>
-            <option value="gold">Золотой</option>
-            <option value="greenyellow">Салатовый</option>
-            <option value="forestgreen">Зелёный</option>
-            <option value="aquamarine">Аквамарин</option>
-            <option value="lightskyblue">Небесно-голубой</option>
-            <option value="lightsteelblue">Серо-голубой</option>
-            <option value="darkblue">Тёмно-синий</option>
-            <option value="indigo">Индиго</option>
-            <option value="mediumpurple">Фиолетовый</option>
-            <option value="purple">Пурпурный</option>
-        </select>
-    </label>
 
-    <label>Размер квадрата(<output class="pixels">100</output>px)
-        <input class="size-setting" type="range" min="80" max="350" step="1" value="100">
+
+    <label>Red(<output class="pixels-red">0</output>px)
+        <input class="red" type="range" min="0" max="255" step="1" value="0">
+    </label>
+    <label>Green(<output class="pixels-green">0</output>px)
+        <input class="green" type="range" min="0" max="255" step="1" value="0">
+    </label>
+    <label>Blue(<output class="pixels-blue">0</output>px)
+        <input class="blue" type="range" min="0" max="255" step="1" value="0">
     </label>
 
     <section class="container">
@@ -47,22 +32,37 @@
     </section>
 
     <script>
-        let container = document.querySelector('.container')
         let div = document.querySelector('div');
-        let bgSetting = document.querySelector('.background-setting');
-        let sizeSetting = document.querySelector('.size-setting');
-        let pixels = document.querySelector('.pixels');
+
+        let red = document.querySelector('.red');
+        let green = document.querySelector('.green');
+        let blue = document.querySelector('.blue');
+
+        let pixelsRed = document.querySelector('.pixels-red');
+        let pixelsGreen = document.querySelector('.pixels-green');
+        let pixelsBlue = document.querySelector('.pixels-blue');
 
 
-        bgSetting.onchange = function () {
-            div.style.backgroundColor = bgSetting.value;
-        };
+     
 
-        sizeSetting.onchange = function () {
-            pixels.textContent = sizeSetting.value;
-            div.style.width = sizeSetting.value + 'px';
-            div.style.height = sizeSetting.value + 'px'
+
+
+        red.onchange = function () {
+            pixelsRed.textContent = red.value;
+            div.style.backgroundColor= `rgb(${red.value},${green.value},${blue.value})`;
+           
         }
+        green.onchange = function () {
+            pixelsGreen.textContent = green.value;
+            div.style.backgroundColor= `#${red.value}${green.value}${blue.value}`;
+        }
+        blue.onchange = function () {
+            pixelsBlue.textContent = blue.value;
+            div.style.backgroundColor= `#${red.value}${green.value}${blue.value}`;
+
+        }
+
+
     </script>
 
 
