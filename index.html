@@ -13,18 +13,18 @@
 <body>
 
 
-    <label>Red(<output class="pixels-red">0</output>px)
-        <input class="red" type="range" min="0" max="255" step="1" value="0">
+    <label>Red(<output id="pixels-red">0</output>px)
+        <input id="red" type="range" min="0" max="255" step="1" value="0">
     </label>
-    <label>Green(<output class="pixels-green">0</output>px)
-        <input class="green" type="range" min="0" max="255" step="1" value="0">
+    <label>Green(<output id="pixels-green">0</output>px)
+        <input id="green" type="range" min="0" max="255" step="1" value="0">
     </label>
-    <label>Blue(<output class="pixels-blue">0</output>px)
-        <input class="blue" type="range" min="0" max="255" step="1" value="0">
+    <label>Blue(<output id="pixels-blue">0</output>px)
+        <input id="blue" type="range" min="0" max="255" step="1" value="0">
     </label>
 
-    <section class="container">
-        <div style=" background: white;
+    <section id="container">
+        <div id="block" style=" background: white;
         border: 1px solid #000;
         width: 100px;
         height: 100px;">color</div>
@@ -32,15 +32,15 @@
     </section>
 
     <script>
-        let div = document.querySelector('div');
+        const div = document.getElementById('block');
 
-        let red = document.querySelector('.red');
-        let green = document.querySelector('.green');
-        let blue = document.querySelector('.blue');
+        const red = document.getElementById('red');
+        const green = document.getElementById('green');
+        const blue = document.getElementById('blue');
 
-        let pixelsRed = document.querySelector('.pixels-red');
-        let pixelsGreen = document.querySelector('.pixels-green');
-        let pixelsBlue = document.querySelector('.pixels-blue');
+        const pixelsRed = document.getElementById('pixels-red');
+        const pixelsGreen = document.getElementById('pixels-green');
+        const pixelsBlue = document.getElementById('pixels-blue');
 
 
      
