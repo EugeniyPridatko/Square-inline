@@ -1,51 +1,38 @@
-// let btnOne = document.querySelector('.btn1');
-// let btnTwo = document.querySelector('.btn2');
-// let div = document.querySelectorAll('div');
+const div = document.getElementById('block');
 
 
-// btnOne.addEventListener('click', function (evt) {
-//     evt.preventDefault();
-//     for (let i = 0; i < div.length; i++) {
+        const sizeSetting = document.getElementById('setting');
 
-//         div[i].classList.add('red');
-//     }
+        const red = document.getElementById('red');
+        const green = document.getElementById('green');
+        const blue = document.getElementById('blue');
 
-// });
-
-// btnTwo.addEventListener('click', function (evt) {
-//     evt.preventDefault();
-//     for (let i = 0; i < div.length; i++) {
-
-//         div[i].classList.add('green');
-//     }
-// });
-
-// for (let i = 0; i < div.length; i++) {
-//     div[i].addEventListener('click', function (evt) {
-//         evt.preventDefault();
-
-//         div[i].classList.add('size');
-
-//     });
-// }
+        const pixels = document.getElementById('pixels');
+        const pixelsRed = document.getElementById('pixels-red');
+        const pixelsGreen = document.getElementById('pixels-green');
+        const pixelsBlue = document.getElementById('pixels-blue');
 
 
 
 
+        sizeSetting.onchange = function () {
+            pixels.textContent = sizeSetting.value;
+            div.style.width = sizeSetting.value + 'px';
+            div.style.height = sizeSetting.value + 'px';
+        }
 
-// let container = document.querySelector('.container')
-// let div = document.querySelector('div');
-// let bgSetting = document.querySelector('.background-setting');
-// let sizeSetting = document.querySelector('.size-setting');
-// let pixels = document.querySelector('.pixels');
 
+        red.onchange = function () {
+            pixelsRed.textContent = red.value;
+            div.style.backgroundColor = `rgb(${red.value},${green.value},${blue.value})`;
 
-// bgSetting.onchange = function () {
-//     div.style.backgroundColor = bgSetting.value;
-// };
+        }
+        green.onchange = function () {
+            pixelsGreen.textContent = green.value;
+            div.style.backgroundColor = `rgb(${red.value},${green.value},${blue.value})`;
+        }
+        blue.onchange = function () {
+            pixelsBlue.textContent = blue.value;
+            div.style.backgroundColor = `rgb(${red.value},${green.value},${blue.value})`;
 
-// sizeSetting.onchange = function () {
-//     pixels.textContent = sizeSetting.value;
-//     div.style.width = sizeSetting.value + 'px';
-//     div.style.height = sizeSetting.value + 'px'
-// }
+        }
