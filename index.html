@@ -12,30 +12,41 @@
 
 <body>
 
+    <label> <input id="radio-pixel" type="radio" name="answer" value="px">px</label>
+    <label> <input id="radio-percent" type="radio" name="answer" value="%">
+        %</label>
 
-    <label>Размер(<output id="pixels">80</output>px)
-        <input id="setting" type="range" min="80" max="250" step="1" value="80">
+
+
+
+
+    <label>Ширина(<output id="pixels-width">50</output>)
+        <input id="setting-width" type="range" min="50" max="250" step="1" value="50">
     </label>
 
-    <label>Red(<output id="pixels-red">0</output>px)
+    <label>Высота(<output id="pixels-height">50</output>)
+        <input id="setting-height" type="range" min="50" max="250" step="1" value="50">
+    </label>
+
+    <label>Red(<output id="pixels-red">0</output>)
         <input id="red" type="range" min="0" max="255" step="1" value="0">
     </label>
-    <label>Green(<output id="pixels-green">0</output>px)
+    <label>Green(<output id="pixels-green">0</output>)
         <input id="green" type="range" min="0" max="255" step="1" value="0">
     </label>
-    <label>Blue(<output id="pixels-blue">0</output>px)
+    <label>Blue(<output id="pixels-blue">0</output>)
         <input id="blue" type="range" min="0" max="255" step="1" value="0">
     </label>
 
     <section id="container">
         <div id="block" style=" background: white;
         border: 1px solid #000;
-        width: 100px;
-        height: 100px;">color</div>
+        width: 50px;
+        height: 50px; position:absolute;">color</div>
 
     </section>
 
- 
+
 
 
 
